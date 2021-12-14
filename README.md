@@ -13,4 +13,5 @@ Next, from the project folder, install the dependencies:
 npm i
 
 Start the Server
+
 node index.js
