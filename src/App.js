@@ -19,7 +19,13 @@ class App extends React.Component {
         counters[index] = { ...counter };
         counters[index].value++;
         this.setState({ counters });
-        console.log(this.state.counters[index]);
+    };
+    handleDecrement = (counter) => {
+        const counters = [...this.state.counters];
+        const index = counters.indexOf(counter);
+        counters[index] = { ...counter };
+        counters[index].value--;
+        this.setState({ counters });
     };
     handleReset = () => {
         // console.log(this.state.counters);
@@ -43,9 +49,10 @@ class App extends React.Component {
                     }
                 />
                 <main className="container">
-                    {/* <Movies /> */}
+                    <Movies />
                     <Counters
                         onIncrement={this.handleIncrement}
+                        onDecrement={this.handleDecrement}
                         onReset={this.handleReset}
                         onDelete={this.handleDelete}
                         counters={this.state.counters}
