@@ -43,20 +43,20 @@ class App extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <Navbar
+                {/* <Navbar
                     totalCounters={
                         this.state.counters.filter((c) => c.value > 0).length
                     }
-                />
-                <main className="container">
+                /> */}
+                <main className="container m-2">
                     <Movies />
-                    <Counters
+                    {/* <Counters
                         onIncrement={this.handleIncrement}
                         onDecrement={this.handleDecrement}
                         onReset={this.handleReset}
                         onDelete={this.handleDelete}
                         counters={this.state.counters}
-                    />
+                    /> */}
                 </main>
             </React.Fragment>
         );
